@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/login/basic', ['middleware' => 'auth.basic', function () {
+    return redirect('/home');
+}]);
