@@ -8,14 +8,14 @@ class RawPHPCookieController extends Controller
 {
     public function setCookie()
     {
-        if (isset($_COOKIE['counter'])) {
-            $counter = $_COOKIE['counter'];
+        if (isset($_COOKIE['counter'])) {       // check cookie
+            $counter = $_COOKIE['counter'];     // read
             $counter++;
         } else {
             $counter = 0;
         }
 
-        setcookie('counter', $counter, time() + 3600); // 1 hour
+        setcookie('counter', $counter, time() + 3600); // set for 1 hour
 
         return view('cookie')->with(['counter' => $counter]);
     }
@@ -23,9 +23,10 @@ class RawPHPCookieController extends Controller
     public function unsetCookie()
     {
         if (isset($_COOKIE['counter'])) {
+            // set a cookie with an expiration date in the past
             setcookie('counter', '', -1);
         }
 
-        return redirect('/cookie-sample/raw/set');
+        return redirect('/cookie-sample/laravel/set');
     }
 }

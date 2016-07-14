@@ -25,3 +25,6 @@ Route::get('/login/basic', ['middleware' => 'auth.basic', function () {
 
 Route::get('/cookie-sample/raw/set', 'RawPHPCookieController@setCookie');
 Route::get('/cookie-sample/raw/unset', 'RawPHPCookieController@unsetCookie');
+
+Route::get('/cookie-sample/laravel/set', 'LaravelCookieController@setCookie');
+Route::get('/cookie-sample/laravel/unset', 'LaravelCookieController@unsetCookie');
