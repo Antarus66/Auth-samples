@@ -20,7 +20,7 @@ class LaravelCookieController extends Controller
 
             $counter++;
         } else {
-            $counter = 0;
+            $counter = 1;
         }
 
         $response = response()

@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    <p>Cookie should contain: {{ $counter }}</p>
+    <p>Counter value from session: {{ $counter }}</p>
 @endsection

@@ -12,7 +12,7 @@ class RawPHPCookieController extends Controller
             $counter = $_COOKIE['counter'];     // read
             $counter++;
         } else {
-            $counter = 0;
+            $counter = 1;
         }
 
         setcookie('counter', $counter, time() + 3600); // set for 1 hour
