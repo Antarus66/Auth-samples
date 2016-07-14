@@ -32,5 +32,5 @@ Route::get('/cookie-sample/laravel/unset', 'LaravelCookieController@unsetCookie'
 Route::get('/session-sample/raw/set', 'RawPHPSessionController@setSession');
 Route::get('/session-sample/raw/unset', 'RawPHPSessionController@unsetSession');
 
-//Route::get('/session-sample/laravel/set', 'LaravelCookieController@set');
-//Route::get('/session-sample/laravel/unset', 'LaravelCookieController@unset');
+Route::get('/session-sample/laravel/set', 'LaravelSessionController@setSession');
+Route::get('/session-sample/laravel/unset', 'LaravelSessionController@unsetSession');

@@ -24,8 +24,8 @@ class RawPHPSessionController extends Controller
 
     public function unsetSession()
     {
-        session_start();
-        session_destroy();
+        session_start();        // it is necessary to initialize a session first
+        session_destroy();      // removes session
 
         return redirect('/session-sample/raw/set');
     }
