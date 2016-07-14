@@ -23,6 +23,9 @@ Route::get('/login/basic', ['middleware' => 'auth.basic', function () {
     return redirect('/home');
 }]);
 
+Route::get('/auth/github', 'SocialAuthController@redirectToProvider');
+Route::get('/auth/github/callback', 'SocialAuthController@handleProviderCallback');
+
 Route::get('/cookie-sample/raw/set', 'RawPHPCookieController@setCookie');
 Route::get('/cookie-sample/raw/unset', 'RawPHPCookieController@unsetCookie');
 
