@@ -22,3 +22,6 @@ Route::get('/home', 'HomeController@index');
 Route::get('/login/basic', ['middleware' => 'auth.basic', function () {
     return redirect('/home');
 }]);
+
+Route::get('/cookie-sample/raw/set', 'RawPHPCookieController@setCookie');
+Route::get('/cookie-sample/raw/unset', 'RawPHPCookieController@unsetCookie');
