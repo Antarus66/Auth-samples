@@ -37,3 +37,8 @@ Route::get('/session-sample/raw/unset', 'RawPHPSessionController@unsetSession');
 
 Route::get('/session-sample/laravel/set', 'LaravelSessionController@setSession');
 Route::get('/session-sample/laravel/unset', 'LaravelSessionController@unsetSession');
+
+Route::get('/articles/{id}/edit', [
+    'middleware' => 'auth',
+    'uses' => 'ArticlesController@edit'
+]);

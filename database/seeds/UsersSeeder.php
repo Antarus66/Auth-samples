@@ -16,12 +16,12 @@ class UsersSeeder extends Seeder
             [
                 'name' => 'Andrey',
                 'email' => 'andriy.tarusin@binary-studio.com',
-                'password' => '123456'
+                'password' => bcrypt('123456'),
             ],
             [
                 'name' => 'User',
                 'email' => 'user@example.com',
-                'password' => '123456'
+                'password' => bcrypt('123456')
             ],
         ];
 
