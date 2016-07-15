@@ -27,6 +27,6 @@ class RawPHPCookieController extends Controller
             setcookie('counter', '', -1);
         }
 
-        return redirect('/cookie-sample/laravel/set');
+        return redirect('/cookie-sample/raw/set');
     }
 }
